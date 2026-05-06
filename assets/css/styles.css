@@ -3,24 +3,19 @@
    ROOT VARIABLES
 ========================= */
 
+
 :root {
-    --bg-main: #050b12;
-    --bg-section: #08111b;
-    --bg-card: #0d1722;
+    --bg-main: #02050a;
+    --bg-section: #050911;
+    --bg-card: #0b1220;
 
     --text-main: #f5f7fa;
-    --text-secondary: #9fb3c8;
+    --text-secondary: #94a3b8;
 
     --accent: #4fd1c5;
     --accent-light: #7ef9e2;
-
-    --border: rgba(255,255,255,0.06);
-
-    --shadow:
-        0 12px 35px rgba(0,0,0,0.35);
-
-    --radius: 22px;
 }
+```
 
 /* =========================
    GLOBAL
@@ -258,18 +253,7 @@ section {
 /* =========================
    INTRO TEXT
 ========================= */
-
-.intro {
-    width: min(720px, 90%);
-
-    margin: auto;
-
-    color: #050b12;
-
-    font-size: 1.08rem;
-
-    line-height: 1.9;
-}
+.intro { width: min(720px, 90%); margin: auto; color: var(--text-secondary); font-size: 1.08rem; line-height: 1.9; }
 
 /* =========================
    PROJECT GRID
