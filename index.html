@@ -1,234 +1,151 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- =========================
-         META
-    ========================== -->
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color"
-          content="#4fd1c5">
-
-    <meta name="author"
-          content="Affaan">
+    <meta name="theme-color" content="#050b12">
+    <meta name="author" content="Affaan">
 
     <title>Affaan | Portfolio</title>
 
-    <!-- =========================
-         FAVICON
-    ========================== -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 
-    <link rel="icon"
-          type="image/x-icon"
-          href="assets/img/favicon.png">
-
-    <!-- =========================
-         GOOGLE FONT
-    ========================== -->
-
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <!-- =========================
-         BULMA CSS
-    ========================== -->
-
+    <!-- Bulma -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
 
-    <!-- =========================
-         FONT AWESOME
-    ========================== -->
-
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-    <!-- =========================
-         CUSTOM CSS
-    ========================== -->
-
-    <link rel="stylesheet"
-          href="assets/css/styles.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+<!-- ========================= NAVBAR ========================== -->
 
-    <nav class="nav container">
+<nav class="nav container">
 
-        <!-- Left Side -->
-        <div class="nav-left">
+    <div class="nav-left">
 
-            <!-- GitHub -->
-            <a href="https://github.com/affaansyed1"
-               class="nav-item"
-               target="_blank">
+        <a href="https://github.com/affaansyed1"
+           class="nav-item"
+           target="_blank"
+           rel="noopener noreferrer">
 
-                <span class="icon">
-                    <i class="fa fa-github"></i>
-                </span>
+            <span class="icon">
+                <i class="fa fa-github"></i>
+            </span>
 
-            </a>
+        </a>
 
+    </div>
+
+    <div class="nav-right nav-menu">
+
+        <a class="nav-item" href="#about">About</a>
+        <a class="nav-item" href="#projects">Projects</a>
+
+    </div>
+
+</nav>
+
+<!-- ========================= ABOUT ========================== -->
+
+<section id="about" class="section section-1">
+
+    <div class="container has-text-centered">
+
+        <!-- Avatar -->
+        <div class="avatar-container">
+            <img class="avatar"
+                 src="assets/img/profile.jpg"
+                 alt="Profile Picture">
         </div>
 
-        <!-- Right Side -->
-        <div class="nav-right nav-menu">
+        <!-- Name -->
+        <h1 class="title is-2">
+            Affaan Syed
+        </h1>
 
-            <a class="nav-item"
-               href="#about">
-               About
-            </a>
+        <!-- Subtitle -->
+        <p class="subtitle-text">
+            Student • Cool Guy ⚽
+        </p>
 
-            <a class="nav-item"
-               href="#projects">
-               Projects
-            </a>
+        <!-- Intro -->
+        <p class="intro">
+            Hey, I'm Affaan 👋 — A cool guy who can tackle you easily LOL.
+        </p>
 
+    </div>
+
+</section>
+
+<!-- ========================= PROJECTS ========================== -->
+
+<section id="projects" class="section section-2">
+
+    <div class="container">
+
+        <div class="has-text-centered">
+            <h2 class="title is-3">Projects</h2>
         </div>
 
-    </nav>
+        <div class="columns is-multiline is-desktop">
 
-    <!-- =========================
-         HERO / ABOUT SECTION
-    ========================== -->
+            <!-- Project 1 -->
+            <div class="column is-one-third">
 
-    <section id="about"
-             class="section section-1">
+                <div class="box project-text">
+                <a href="https://ai.studio/apps/96c9933e-978a-44f0-9e4f-6d354aabca75?fullscreenApplet=true"
+                           target="_blank">
+                    <figure class="image project-figure">
+                        <img src="assets/img/project tms.JPG" alt="Project">
+                    </figure>
 
-        <div class="container has-text-centered">
-
-            <!-- Avatar -->
-            <div class="avatar-container">
-
-                <img class="avatar"
-                     src="assets/img/profile.jpg"
-                     alt="Profile Picture">
-
-            </div>
-
-            <!-- Name -->
-            <h1 class="title is-2">
-                Affaan Syed
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="subtitle-text">
-                Student • Cool guy ⚽
-            </p>
-
-            <!-- Intro -->
-            <p class="intro">
-                Hey, I'm Affaan 👋 — just a cool guy.
-
-                I can tackle you easily.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
-         PROJECTS SECTION
-    ========================== -->
-
-    <section id="projects"
-             class="section section-2">
-
-        <div class="container">
-
-            <!-- Section Title -->
-            <div class="has-text-centered">
-
-                <h2 class="title is-3">
-                    Projects
-                </h2>
-
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="columns is-multiline is-desktop">
-
-                <!-- =========================
-                     PROJECT CARD
-                ========================== -->
-
-                <div class="column is-one-third">
-
-                    <div class="box project-text">
-
-                        <article>
-                            <a href="https://ai.studio/apps/96c9933e-978a-44f0-9e4f-6d354aabca75?fullscreenApplet=true"
-                                   target="_blank">
-
-
-                            <!-- Project Image -->
-                            <figure class="image project-figure">
-
-                                <img src="assets/img/project tms.JPG"
-                                     alt="Track My SSC Project">
-
-                            </figure>
-
-                            <!-- Project Title -->
-                            <p>
-
-                                
-                                    Track My SSC 📊
-
-                                </a>
-
-                            </p>
-
-                        </article>
-
-                    </div>
+                    <p>
+                        
+                            Track My SSC 📊
+                        </a>
+                    </p>
 
                 </div>
 
-                <!-- =========================
-                     ADD MORE PROJECTS HERE
-                ========================== -->
-
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+</section>
 
-    <footer class="section section-4">
+<!-- ========================= FOOTER ========================== -->
 
-        <div class="container">
+<footer class="section section-4">
 
-            <p>
-                © 2026 Affaan Syed • Built with HTML & CSS
-            </p>
+    <div class="container has-text-centered">
 
-        </div>
+        <p>
+            © 2026 Affaan Syed • Built with HTML & CSS
+        </p>
 
-    </footer>
+    </div>
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script src="controller.js"></script>
+</footer>
 
 </body>
-
 </html>
 ```
