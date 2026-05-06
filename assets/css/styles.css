@@ -3,56 +3,43 @@
    ROOT VARIABLES
 ========================= */
 
-
 :root {
-    --bg-main: #02050a;
-    --bg-section: #050911;
-    --bg-card: #0b1220;
+    --bg-main: #050b12;
+    --bg-section: #08111b;
+    --bg-card: #0d1722;
 
     --text-main: #f5f7fa;
     --text-secondary: #94a3b8;
 
     --accent: #4fd1c5;
     --accent-light: #7ef9e2;
+
+    --border: rgba(255,255,255,0.06);
+
+    --shadow: 0 12px 35px rgba(0,0,0,0.35);
+
+    --radius: 22px;
 }
-```
 
 /* =========================
-   GLOBAL
+   GLOBAL RESET (IMPORTANT FIX)
 ========================= */
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 
     font-family: 'Poppins', sans-serif;
     color: var(--text-main);
 
-    background:
-        radial-gradient(circle at top left,
-        rgba(79,209,197,0.08),
-        transparent 25%),
-
-        radial-gradient(circle at bottom right,
-        rgba(79,209,197,0.05),
-        transparent 25%),
-
-        var(--bg-main);
-
+    background-color: var(--bg-main) !important;
     overflow-x: hidden;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
-.container {
-    width: min(1100px, 92%);
-    margin: auto;
+/* FORCE DARK ON BULMA SECTIONS */
+section {
+    background-color: var(--bg-main) !important;
 }
 
 /* =========================
@@ -62,7 +49,6 @@ body {
 a {
     color: var(--accent);
     text-decoration: none;
-
     transition: 0.3s ease;
 }
 
@@ -92,17 +78,13 @@ a:hover {
 
 .nav-item {
     color: var(--text-secondary);
-
     font-weight: 500;
-
-    letter-spacing: 0.3px;
 
     transition: 0.25s ease;
 }
 
 .nav-item:hover {
     color: white !important;
-
     transform: translateY(-2px);
 }
 
@@ -128,7 +110,7 @@ section {
 
     text-align: center;
 
-    background: var(--bg-main);
+    background: var(--bg-main) !important;
 }
 
 /* =========================
@@ -136,10 +118,9 @@ section {
 ========================= */
 
 .section-2 {
-    background: var(--bg-section);
+    background: var(--bg-section) !important;
 
     border-top: 1px solid rgba(255,255,255,0.04);
-
     border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
@@ -148,29 +129,22 @@ section {
 ========================= */
 
 .section-4 {
-    background: var(--bg-main);
-
-    padding: 2rem 0;
+    background: var(--bg-main) !important;
 }
 
 /* =========================
-   TITLES
+   TITLES (FIXED VISIBILITY)
 ========================= */
 
 .title {
-    color: black;
-
+    color: var(--text-main) !important;
     font-weight: 700;
-
     letter-spacing: -1px;
 }
 
 .title.is-2 {
     font-size: clamp(2.5rem, 6vw, 4rem);
-
     margin-top: 1.5rem;
-
-    margin-bottom: 0.5rem;
 }
 
 .title.is-3 {
@@ -183,9 +157,7 @@ section {
 
 .subtitle-text {
     color: var(--text-secondary);
-
     font-size: 1rem;
-
     margin-bottom: 2rem;
 }
 
@@ -195,31 +167,24 @@ section {
 
 .avatar-container {
     position: relative;
-
     display: inline-block;
 }
 
 .avatar-container::before {
     content: "";
-
     position: absolute;
-
     inset: -10px;
-
     border-radius: 50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--accent),
-            transparent,
-            var(--accent-light)
-        );
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        transparent,
+        var(--accent-light)
+    );
 
     filter: blur(20px);
-
     opacity: 0.7;
-
     z-index: -1;
 }
 
@@ -228,39 +193,31 @@ section {
     height: 200px;
 
     object-fit: cover;
-
     border-radius: 50%;
 
     border: 4px solid rgba(255,255,255,0.12);
 
-    background: #111;
+    box-shadow: var(--shadow);
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.45);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+    transition: 0.35s ease;
 }
 
 .avatar:hover {
     transform: translateY(-6px) scale(1.03);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.55);
 }
 
 /* =========================
    INTRO TEXT
 ========================= */
-.intro { width: min(720px, 90%); margin: auto; color: var(--text-secondary); font-size: 1.08rem; line-height: 1.9; }
 
-/* =========================
-   PROJECT GRID
-========================= */
+.intro {
+    width: min(720px, 90%);
+    margin: auto;
 
-.columns {
-    margin-top: 2rem;
+    color: var(--text-secondary);
+
+    font-size: 1.08rem;
+    line-height: 1.9;
 }
 
 /* =========================
@@ -268,8 +225,6 @@ section {
 ========================= */
 
 .box {
-    height: 100%;
-
     padding: 1.4rem;
 
     border-radius: var(--radius);
@@ -280,22 +235,12 @@ section {
 
     box-shadow: var(--shadow);
 
-    overflow: hidden;
-
-    transition:
-        transform 0.35s ease,
-        border 0.35s ease,
-        box-shadow 0.35s ease;
+    transition: 0.35s ease;
 }
 
 .box:hover {
     transform: translateY(-10px);
-
     border-color: rgba(79,209,197,0.25);
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,0.45),
-        0 0 20px rgba(79,209,197,0.08);
 }
 
 /* =========================
@@ -304,16 +249,12 @@ section {
 
 .project-figure {
     overflow: hidden;
-
     border-radius: 16px;
 }
 
 .project-figure img {
     width: 100%;
-
-    display: block;
-
-    transition: transform 0.45s ease;
+    transition: 0.45s ease;
 }
 
 .box:hover .project-figure img {
@@ -330,9 +271,6 @@ section {
 
 .project-text p {
     margin-top: 1.2rem;
-
-    font-size: 1.05rem;
-
     font-weight: 500;
 }
 
@@ -342,10 +280,7 @@ section {
 
 footer p {
     color: rgba(255,255,255,0.45);
-
     text-align: center;
-
-    font-size: 0.95rem;
 }
 
 /* =========================
@@ -361,13 +296,7 @@ footer p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background:
-        linear-gradient(
-            to bottom,
-            var(--accent),
-            var(--accent-light)
-        );
-
+    background: linear-gradient(to bottom, var(--accent), var(--accent-light));
     border-radius: 999px;
 }
 
@@ -381,29 +310,17 @@ footer p {
         padding: 5rem 0;
     }
 
-    .nav {
-        border-radius: 14px;
-
-        padding: 0.9rem 1rem;
+    .avatar {
+        width: 160px;
+        height: 160px;
     }
 
     .title.is-2 {
         font-size: 2.5rem;
     }
 
-    .avatar {
-        width: 160px;
-        height: 160px;
-    }
-
     .intro {
         font-size: 1rem;
-
-        line-height: 1.7;
-    }
-
-    .box {
-        margin-bottom: 1rem;
     }
 }
 ```
