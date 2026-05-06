@@ -1,26 +1,30 @@
 ```css
 /* =========================
-   ROOT + GLOBAL
+   ROOT VARIABLES
 ========================= */
 
 :root {
-    --bg-primary: #07131d;
-    --bg-secondary: #0d1b2a;
-    --card-bg: rgba(255,255,255,0.05);
+    --bg-main: #050b12;
+    --bg-section: #08111b;
+    --bg-card: #0d1722;
 
-    --text-primary: #f4f7fb;
+    --text-main: #f5f7fa;
     --text-secondary: #9fb3c8;
 
     --accent: #4fd1c5;
     --accent-light: #7ef9e2;
 
-    --border: rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.06);
 
     --shadow:
-        0 10px 30px rgba(0,0,0,0.25);
+        0 12px 35px rgba(0,0,0,0.35);
 
-    --radius: 20px;
+    --radius: 22px;
 }
+
+/* =========================
+   GLOBAL
+========================= */
 
 html {
     scroll-behavior: smooth;
@@ -31,12 +35,18 @@ body {
     padding: 0;
 
     font-family: 'Poppins', sans-serif;
-    color: var(--text-primary);
+    color: var(--text-main);
 
     background:
-        radial-gradient(circle at top left, #10263b 0%, transparent 30%),
-        radial-gradient(circle at bottom right, #0a2a36 0%, transparent 30%),
-        var(--bg-primary);
+        radial-gradient(circle at top left,
+        rgba(79,209,197,0.08),
+        transparent 25%),
+
+        radial-gradient(circle at bottom right,
+        rgba(79,209,197,0.05),
+        transparent 25%),
+
+        var(--bg-main);
 
     overflow-x: hidden;
 }
@@ -55,10 +65,10 @@ body {
 ========================= */
 
 a {
-    text-decoration: none;
     color: var(--accent);
+    text-decoration: none;
 
-    transition: 0.25s ease;
+    transition: 0.3s ease;
 }
 
 a:hover {
@@ -71,12 +81,14 @@ a:hover {
 
 .nav {
     margin-top: 18px;
+
     padding: 1rem 1.5rem;
 
-    border: 1px solid var(--border);
     border-radius: 18px;
 
-    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+
+    background: rgba(10,16,24,0.85);
 
     backdrop-filter: blur(12px);
 
@@ -85,7 +97,9 @@ a:hover {
 
 .nav-item {
     color: var(--text-secondary);
+
     font-weight: 500;
+
     letter-spacing: 0.3px;
 
     transition: 0.25s ease;
@@ -93,6 +107,7 @@ a:hover {
 
 .nav-item:hover {
     color: white !important;
+
     transform: translateY(-2px);
 }
 
@@ -117,6 +132,30 @@ section {
     flex-direction: column;
 
     text-align: center;
+
+    background: var(--bg-main);
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.section-2 {
+    background: var(--bg-section);
+
+    border-top: 1px solid rgba(255,255,255,0.04);
+
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.section-4 {
+    background: var(--bg-main);
+
+    padding: 2rem 0;
 }
 
 /* =========================
@@ -125,13 +164,17 @@ section {
 
 .title {
     color: white;
+
     font-weight: 700;
+
     letter-spacing: -1px;
 }
 
 .title.is-2 {
     font-size: clamp(2.5rem, 6vw, 4rem);
+
     margin-top: 1.5rem;
+
     margin-bottom: 0.5rem;
 }
 
@@ -145,7 +188,9 @@ section {
 
 .subtitle-text {
     color: var(--text-secondary);
+
     font-size: 1rem;
+
     margin-bottom: 2rem;
 }
 
@@ -155,6 +200,7 @@ section {
 
 .avatar-container {
     position: relative;
+
     display: inline-block;
 }
 
@@ -162,7 +208,8 @@ section {
     content: "";
 
     position: absolute;
-    inset: -8px;
+
+    inset: -10px;
 
     border-radius: 50%;
 
@@ -174,7 +221,8 @@ section {
             var(--accent-light)
         );
 
-    filter: blur(18px);
+    filter: blur(20px);
+
     opacity: 0.7;
 
     z-index: -1;
@@ -193,7 +241,7 @@ section {
     background: #111;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
+        0 15px 40px rgba(0,0,0,0.45);
 
     transition:
         transform 0.35s ease,
@@ -204,11 +252,11 @@ section {
     transform: translateY(-6px) scale(1.03);
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,0.45);
+        0 20px 50px rgba(0,0,0,0.55);
 }
 
 /* =========================
-   INTRO
+   INTRO TEXT
 ========================= */
 
 .intro {
@@ -219,24 +267,21 @@ section {
     color: var(--text-secondary);
 
     font-size: 1.08rem;
+
     line-height: 1.9;
 }
 
 /* =========================
-   PROJECTS SECTION
-========================= */
-
-.section-2 {
-    position: relative;
-}
-
-/* =========================
-   PROJECT CARDS
+   PROJECT GRID
 ========================= */
 
 .columns {
     margin-top: 2rem;
 }
+
+/* =========================
+   PROJECT CARDS
+========================= */
 
 .box {
     height: 100%;
@@ -247,11 +292,11 @@ section {
 
     border: 1px solid var(--border);
 
-    background: var(--card-bg);
-
-    backdrop-filter: blur(14px);
+    background: var(--bg-card);
 
     box-shadow: var(--shadow);
+
+    overflow: hidden;
 
     transition:
         transform 0.35s ease,
@@ -262,10 +307,11 @@ section {
 .box:hover {
     transform: translateY(-10px);
 
-    border-color: rgba(79,209,197,0.35);
+    border-color: rgba(79,209,197,0.25);
 
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.35);
+        0 18px 45px rgba(0,0,0,0.45),
+        0 0 20px rgba(79,209,197,0.08);
 }
 
 /* =========================
@@ -274,11 +320,13 @@ section {
 
 .project-figure {
     overflow: hidden;
+
     border-radius: 16px;
 }
 
 .project-figure img {
     width: 100%;
+
     display: block;
 
     transition: transform 0.45s ease;
@@ -298,21 +346,22 @@ section {
 
 .project-text p {
     margin-top: 1.2rem;
+
     font-size: 1.05rem;
+
     font-weight: 500;
 }
 
 /* =========================
-   FOOTER
+   FOOTER TEXT
 ========================= */
-
-footer {
-    padding-bottom: 2rem;
-}
 
 footer p {
     color: rgba(255,255,255,0.45);
+
     text-align: center;
+
+    font-size: 0.95rem;
 }
 
 /* =========================
@@ -328,11 +377,12 @@ footer p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        to bottom,
-        var(--accent),
-        var(--accent-light)
-    );
+    background:
+        linear-gradient(
+            to bottom,
+            var(--accent),
+            var(--accent-light)
+        );
 
     border-radius: 999px;
 }
@@ -349,7 +399,12 @@ footer p {
 
     .nav {
         border-radius: 14px;
+
         padding: 0.9rem 1rem;
+    }
+
+    .title.is-2 {
+        font-size: 2.5rem;
     }
 
     .avatar {
@@ -359,6 +414,7 @@ footer p {
 
     .intro {
         font-size: 1rem;
+
         line-height: 1.7;
     }
 
