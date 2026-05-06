@@ -1,35 +1,62 @@
+```html id="i7x3qa"
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+    <!-- =========================
+         META
+    ========================== -->
+
     <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#4fd1c5">
+
+    <meta name="author"
+          content="Affaan">
+
     <title>Affaan | Portfolio</title>
 
-    <!-- Mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =========================
+         FAVICON
+    ========================== -->
 
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#00d1b2">
+    <link rel="icon"
+          type="image/x-icon"
+          href="assets/img/favicon.png">
 
-    <!-- Author -->
-    <meta name="author" content="Affaan">
+    <!-- =========================
+         GOOGLE FONT
+    ========================== -->
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- =========================
+         BULMA CSS
+    ========================== -->
 
-    <!-- Bulma CSS -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
 
-    <!-- Font Awesome -->
+    <!-- =========================
+         FONT AWESOME
+    ========================== -->
+
     <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- =========================
+         CUSTOM CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="assets/css/styles.css">
+
 </head>
 
 <body>
@@ -38,14 +65,15 @@
          NAVBAR
     ========================== -->
 
-    <nav class="nav container void-background">
+    <nav class="nav container">
 
+        <!-- Left Side -->
         <div class="nav-left">
 
             <!-- GitHub -->
             <a href="https://github.com/affaansyed1"
-                class="nav-item"
-                target="_blank">
+               class="nav-item"
+               target="_blank">
 
                 <span class="icon">
                     <i class="fa fa-github"></i>
@@ -55,49 +83,87 @@
 
         </div>
 
+        <!-- Right Side -->
         <div class="nav-right nav-menu">
 
-            <a class="nav-item" href="#about">
-                About
+            <a class="nav-item"
+               href="#about">
+               About
             </a>
 
-            <a class="nav-item" href="#projects">
-                Projects
+            <a class="nav-item"
+               href="#projects">
+               Projects
             </a>
 
         </div>
 
-        <!-- Mobile Menu -->
-        <span class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </span>
-
     </nav>
 
-<!-- ========================= ABOUT SECTION ========================== --> <section id="about" class="section section-1"> <div class="container has-text-centered"> <!-- Avatar --> <div class="avatar-container"> <img class="avatar" src="assets/img/profile.jpg" alt="Profile Picture"> </div> <!-- Name --> <h1 class="title is-2"> Affaan Syed </h1> <!-- Subtitle --> <p class="subtitle-text"> Student </p> </div> </section>
+    <!-- =========================
+         HERO / ABOUT SECTION
+    ========================== -->
+
+    <section id="about"
+             class="section section-1">
+
+        <div class="container has-text-centered">
+
+            <!-- Avatar -->
+            <div class="avatar-container">
+
+                <img class="avatar"
+                     src="assets/img/profile.jpg"
+                     alt="Profile Picture">
+
+            </div>
+
+            <!-- Name -->
+            <h1 class="title is-2">
+                Affaan Syed
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="subtitle-text">
+                Student • Developer • Football Player ⚽
+            </p>
+
+            <!-- Intro -->
+            <p class="intro">
+                Hey, I'm Affaan 👋 — I build cool projects
+                and love football.
+
+                I'm currently learning web development
+                and creating awesome apps.
+            </p>
+
+        </div>
+
+    </section>
 
     <!-- =========================
          PROJECTS SECTION
     ========================== -->
 
-    <section id="projects" class="section section-2">
+    <section id="projects"
+             class="section section-2">
 
         <div class="container">
 
-            <!-- Title -->
+            <!-- Section Title -->
             <div class="has-text-centered">
-                <h3 class="title is-3">
+
+                <h2 class="title is-3">
                     Projects
-                </h3>
+                </h2>
+
             </div>
 
-            <!-- Project Grid -->
+            <!-- Projects Grid -->
             <div class="columns is-multiline is-desktop">
 
                 <!-- =========================
-                     PROJECT 1
+                     PROJECT CARD
                 ========================== -->
 
                 <div class="column is-one-third">
@@ -110,15 +176,15 @@
                             <figure class="image project-figure">
 
                                 <img src="assets/img/project tms.JPG"
-                                    alt="Track My SSC Project">
+                                     alt="Track My SSC Project">
 
                             </figure>
 
-                            <!-- Project Name -->
-                            <p style="margin-top: 15px;">
+                            <!-- Project Title -->
+                            <p>
 
                                 <a href="https://ai.studio/apps/96c9933e-978a-44f0-9e4f-6d354aabca75?fullscreenApplet=true"
-                                    target="_blank">
+                                   target="_blank">
 
                                     Track My SSC 📊
 
@@ -146,11 +212,15 @@
          FOOTER
     ========================== -->
 
-    <footer class="section section-4 has-text-centered">
+    <footer class="section section-4">
 
-        <p>
-            © 2026 Affaan Syed • Built with HTML & CSS
-        </p>
+        <div class="container">
+
+            <p>
+                © 2026 Affaan Syed • Built with HTML & CSS
+            </p>
+
+        </div>
 
     </footer>
 
@@ -163,3 +233,4 @@
 </body>
 
 </html>
+```
