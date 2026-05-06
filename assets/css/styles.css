@@ -1,108 +1,108 @@
 html, body{
-	font-size:16px;
-	color: #dfdfdf;
-	background-color: #063647; 
+    font-family: 'Poppins', sans-serif;
+    font-size:16px;
+    color: #e6f1ff;
+    background: linear-gradient(135deg, #062f3f, #021c26);
 }
 
+/* Links */
 a {
   color: #00d1b2;
+  transition: 0.3s;
 }
 
 a:hover {
-  color: #00d1b2;
+  color: #00fff0;
 }
 
+/* Sections */
 section{
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+    padding: 4rem 1.5rem;
 }
 
-.section-1 {
-	background: #063647;
-}
-
-.section-2 {
-	background-color: #052D3D;
-}
-
-.section-3 {
-	background-color: #0E282E;
-}
-
-.section-4 {
-	background-color: #063647;
-	padding: 0.2rem;
+/* Navbar */
+.nav {
+    padding: 1rem 0;
 }
 
 a.nav-item {
-	color: #dfdfdf;
+    color: #cfd8dc;
+    font-weight: 500;
 }
 
 a.nav-item:hover {
-	color: #fff;
+    color: #ffffff;
 }
 
+/* Avatar */
 .avatar{
-	height:200px;
-	border-radius: 50%;
+    height:180px;
+    border-radius: 50%;
+    border: 4px solid #00d1b2;
+    box-shadow: 0 0 25px rgba(0, 209, 178, 0.4);
+    transition: transform 0.3s;
 }
 
-.intro-description{
-	padding-top: 1rem;
+.avatar:hover {
+    transform: scale(1.05);
 }
 
-.social-container img{
-	max-width:100%;
-	max-height:175px;
-	margin-bottom:15px;
-}
-
-.project-figure {
-	margin: 0 auto 1rem auto;
-	max-height: 256px;
-	max-width: 256px;
-}
-
-.project-text {
-	text-align: justify;
-}
-
-.box {
-	background-color: transparent;
-	border: 2px solid rgba(7, 59, 79, 0.5);
-}
-
-.title {
-	color: #fff;
-	text-align: left;
-	margin-bottom: 2rem;
-}
-
+/* Intro */
 .intro {
-	text-align: justify;
-	width: 80%;
-	margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 60%;
+    margin: 1.5rem auto;
+    line-height: 1.6;
 }
 
-.void-background {
-	background-color: transparent; 
+/* Titles */
+.title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
 }
 
+/* Project Cards */
+.box {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: none;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Project Image */
+.project-figure img {
+    border-radius: 10px;
+}
+
+/* Project text */
+.project-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Sections background */
+.section-1 {
+    background: transparent;
+}
+
+.section-2 {
+    background: rgba(0,0,0,0.2);
+}
+
+/* Mobile tweaks */
 @media screen and (max-width: 768px) {
-	.nav-menu {
-		background-color: #063647;
-	}
-
-	.nav-toggle:hover {
-		background-color: transparent;
-	}
-
-	.nav-toggle span {
-		background-color: #dfdfdf;
-	}
-
-	.nav-toggle span:hover {
-		background-color: #fff;
-	}
-
+    .intro {
+        width: 90%;
+        font-size: 1rem;
+    }
 }
